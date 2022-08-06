@@ -29,48 +29,56 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/AshM10/javascript-drum-kit)
-- Live Site URL: [Netlify](https://ash-js-drumkit.netlify.app)
+- Solution URL: [GitHub](https://github.com/AshM10/css-variables)
+- Live Site URL: [Netlify](https://ash-css-variables.netlify.app)
 
 ## My process
 
 ### Built with
 
-- CSS custom properties
-- Flexbox
+- CSS Variables
 - Vanilla JavaScript
 
 ### What I learned
 
-- The keyboard input element
-- Keydown event listener
-- Data Attributes
-- JS Window (BOM)
+- CSS Variables can be updated in JavaScript
+- HTML <label> tag
+- Difference between nodelist and array
+- Use of forEach() method on nodelist
+- Dataset contains all data attributes
 
 To see how you can add code snippets, see below:
 
 ```html
-<div class="keys">
-  <div data-key="65" class="key">
-    <kbd>A</kbd>
-    <span class="sound">clap</span>
-  </div>
-</div>
+<label for="spacing">Spacing:</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
 ```
 
 ```js
-const keys = document.querySelectorAll(".key");
-keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
-window.addEventListener("keydown", playSound);
+function handleUpdate() {
+  const suffix = this.dataset.sizing || "";
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value + suffix
+  );
+}
 ```
 
 ### Continued development
 
-Continue with Challenge #2.
+Continue with Challenge #4.
 
 ### Useful resources
 
-- [Key Code](https://www.toptal.com/developers/keycode) - Helped me get the JavaScript Enevnt Keycode Info
+- [Unsplash](https://unsplash.com) - Source of freely-usable images.
 
 ## Author
 
