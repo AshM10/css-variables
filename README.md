@@ -47,8 +47,6 @@ Users should be able to:
 - Use of forEach() method on nodelist
 - Dataset contains all data attributes
 
-To see how you can add code snippets, see below:
-
 ```html
 <label for="spacing">Spacing:</label>
       <input
