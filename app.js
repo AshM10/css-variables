@@ -1,1 +1,12 @@
-console.log("hello world!");
+const inputs = document.querySelectorAll(".controls input");
+
+function handleUpdate() {
+  const suffix = this.dataset.sizing || "";
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value + suffix
+  );
+}
+
+inputs.forEach((input) => input.addEventListener("change", handleUpdate)); // values will change when you drag around the range
+inputs.forEach((input) => input.addEventListener("mousemove", handleUpdate));
