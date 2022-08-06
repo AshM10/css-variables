@@ -42,7 +42,7 @@ Users should be able to:
 ### What I learned
 
 - CSS Variables can be updated in JavaScript
-- HTML <label> tag
+- HTML label tag
 - Difference between nodelist and array
 - Use of forEach() method on nodelist
 - Dataset contains all data attributes
